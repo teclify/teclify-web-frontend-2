@@ -1,0 +1,185 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/img
+public_folder: img
+
+collections:
+  - name: "index"
+    label: "Home"
+    folder: "content/home"
+    extension: "md"
+    fields:
+      - name: "title"
+        label: "Title"
+        widget: "string"
+      - name: "subtitle"
+        label: "Subtitle"
+        widget: "string"
+      - name: "ctaText"
+        label: "CTA Text"
+        widget: "string"
+      - name: "ctaLink"
+        label: "CTA Link"
+        widget: "string"
+
+      # Challenges Section
+      - name: "challengesTitle"
+        label: "Challenges Section Title"
+        widget: "string"
+      - name: "challenges"
+        label: "Challenges Section"
+        widget: "list"
+        fields:
+          - label: "Challenge Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Icon"
+            name: "icon"
+            widget: "image"
+
+      
+      # Solutions Section
+      - name: "solutionsTitle"
+        label: "Solutions Section Title"
+        widget: "string"
+      - name: "solutions"
+        label: "Solutions Section"
+        widget: "list"
+        fields:
+          - label: "Solution Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Image"
+            name: "image"
+            widget: "image"
+          - label: "Points"
+            name: "points"
+            widget: "list"
+            fields:
+              - label: "Point"
+                name: "point"
+                widget: "string"
+
+
+      # Services Section
+      - name: "services"
+        label: "Services"
+        widget: "list"
+        fields:
+          - label: "Service Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Button Link"
+            name: "buttonLink"
+            widget: "string"
+          - label: "Image"
+            name: "image"
+            widget: "image"
+
+      # Expertise Section
+      - name: "expertiseTitle"
+        label: "Expertise Section Title"
+        widget: "string"
+      - name: "knowledgeItems"
+        label: "Expertise Section (Knowledge Items)"
+        widget: "list"
+        fields:
+          - label: "Item Title"
+            name: "title"
+            widget: "string"
+          - label: "Icon"
+            name: "icon"
+            widget: "image"
+
+      # Portfolio Section
+      - name: "portfolioTitle"
+        label: "Portfolio Section Title"
+        widget: "string"
+      - name: "portfolioItems"
+        label: "Portfolio"
+        widget: "list"
+        fields:
+          - label: "Project Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Image"
+            name: "image"
+            widget: "image"
+
+
+
+
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: "title"
+        label: "Title"
+        widget: "string"
+      - name: "description"
+        label: "Description"
+        widget: "text"
+      - name: "image"
+        label: "Page Image"
+        widget: "image"
+      - name: "services"
+        label: "Services"
+        widget: "list"
+        fields:
+          - label: "Service Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Button Link"
+            name: "buttonLink"
+            widget: "string"
+          - label: "Image"
+            name: "image"
+            widget: "image"
+  
+
+  - name: "aboutus"
+    label: "About Us"
+    folder: "content/aboutus"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: "title"
+        label: "Title"
+        widget: "string"
+      - name: "description"
+        label: "Description"
+        widget: "text"
+      - name: "image"
+        label: "Page Image"
+        widget: "image"
+      - name: "highlights"
+        label: "Highlights"
+        widget: "list"
+        fields:
+          - name: "description"
+            label: "Description"
+            widget: "text"
+          - name: "image"
+            label: "Image"
+            widget: "image"
+
