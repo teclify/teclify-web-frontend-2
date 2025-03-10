@@ -7,6 +7,7 @@ const Impressum = ({ registration, vatId, content,header,contactInfo }) => {
 
     <div className={styles.impressumContainer}>
        <div className={styles.info}>
+        <ContactCard contactInfo={contactInfo} />
         {registration.court && registration.number && (
           <p>
             <strong>Handelsregister:</strong> {registration.court}, {registration.number}
@@ -17,8 +18,6 @@ const Impressum = ({ registration, vatId, content,header,contactInfo }) => {
             <strong>Umsatzsteuer-ID:</strong> {vatId}
           </p>
         )}
-        <ContactCard contactInfo={contactInfo} />
-
       </div>
     <div className={styles.impressum}>
       <h2 className={styles.header}>{header}</h2>

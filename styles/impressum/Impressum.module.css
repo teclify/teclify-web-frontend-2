@@ -23,6 +23,24 @@
     margin-bottom: 20px;
     text-align: center;
   }
+
+
+  .info {
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #4b809c;
+    padding: 16px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+
+  .info p {
+    color: #4b809c;
+  }
   
   .impressum .subheader {
     font-size: 1.4rem;
