@@ -1,0 +1,100 @@
+.card {
+  background-color: #4b809c;
+  border-radius: 15px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialContainer {
+  width: 40px;
+  height: 40px;
+  background-color: #2e5b6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.socialContainer:hover {
+  background-color: #357a98;
+  transform: scale(1.1);
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+}
+
+.socialContainer svg {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px;
+}
+
+.contactContainer>div {
+  flex: 1;
+  max-width: 500px;
+}
+
+
+.page {
+  display: flex;
+  gap: 30px;
+  padding: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 700px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,165 @@
+.section {
+    display: grid;
+    grid-template-columns: 50% 45%;
+    align-items: center;
+    min-height: 500px;
+    height: auto;
+    gap: 5%;
+    padding: 4rem;
+    background-color: #357A98;
+    box-sizing: border-box;
+    min-height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+.header {
+    color: white;
+    font-weight: lighter;
+}
+
+.text {
+    color: white;
+    font-weight: normal;
+}
+
+.button {
+    height: 50px;
+    margin: 5px;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    border: solid #f9f9f9 2px;
+    font-size: 16px;
+    color: rgb(245, 245, 245);
+    transition: 500ms;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 13px #cfcfcf, -1px -1px 13px #bbbbbb;
+    color: #d6d6d6;
+}
+
+.managementProfile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+ 
+  
+  .profileImage {
+    position: relative;
+    height: 100%;
+  }
+  
+  .profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .profileInfo {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .name {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 600;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contactItem {
+    margin: 0;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px; 
+}
+  
+.links a {
+    color: #357A98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .contactLabel {
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .contactItem a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .contactItem a:hover {
+    color: #3182ce;
+  }
+  
+  @media (max-width: 480px) {
+    .managementProfile {
+      grid-template-columns: 1fr;
+    }
+    
+    .profileImage img {
+      border-radius: 10px 10px 0 0;
+      height: 200px;
+    }
+    
+    .profileInfo {
+      padding: 1.5rem;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .content {
+        gap: 2rem;
+    }
+    .button {
+        width: 100%;
+    }
+    .managementProfile {
+      justify-self: center;
+    }
+}

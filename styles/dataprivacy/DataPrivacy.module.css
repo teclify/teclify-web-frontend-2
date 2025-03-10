@@ -1,0 +1,59 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+  }
+  
+ 
+  
+  .tocTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+  }
+  
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tocLink {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .tocLink:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section {
+    scroll-margin-top: 2rem;
+  }
+  
+  .header {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  .text {
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0;
+  }

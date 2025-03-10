@@ -1,0 +1,123 @@
+.section {
+    padding: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid {
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 90dvw;
+}
+
+.managementProfile {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 600px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+ 
+  
+  .profileImage {
+    position: relative;
+    height: 100%;
+  }
+  
+  .profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .profileInfo {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .name {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 600;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contactItem {
+    margin: 0;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px; 
+}
+  
+.links a {
+    color: #357A98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .contactLabel {
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .contactItem a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .contactItem a:hover {
+    color: #3182ce;
+  }
+  
+  @media (max-width: 786px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .managementProfile {
+      grid-template-columns: 1fr;
+    }
+    
+    .profileImage img {
+      border-radius: 10px 10px 0 0;
+      height: 200px;
+    }
+    
+    .profileInfo {
+      padding: 1.5rem;
+    }
+  }
+

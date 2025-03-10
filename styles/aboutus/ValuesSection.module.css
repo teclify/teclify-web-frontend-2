@@ -1,0 +1,115 @@
+.section {
+  padding: 50px;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0fafc;
+}
+
+.svg {
+  width: 400px;
+  height: 400px;
+  margin: 2rem 0;
+  transition: transform 0.5s ease;
+}
+
+.gridContainer {
+  width: 70dvw;
+  height: 80dvh;
+  margin-top: 12vh;
+  position: relative;
+  background-color: red;
+}
+
+.textContainer {
+  position: absolute;
+  background: white;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.textContainer.activeText {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.textContainer:not(.activeText) {
+  transform: translate(-50%, -50%) scale(0.3);
+}
+
+.point {
+  cursor: pointer;
+}
+
+.point.active {
+  filter: drop-shadow(0 0 8px rgba(74, 144, 226, 0.5));
+}
+
+.number {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.valueTitle {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.valueDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .svg {
+    display: none;
+  }
+
+  .gridContainer {
+    width: 90dvw;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .textContainer {
+    width: 70vw;
+  }
+
+  .stickyContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .gridContainer {
+    width: 90dvw;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .textContainer {
+    width: 70vw;
+  }
+}

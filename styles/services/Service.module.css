@@ -1,0 +1,67 @@
+.section {
+    display: grid;
+    grid-template-columns: 35% 60%; /* Sticky Box links (35%) | Content rechts (60%) */
+    gap: 5%;
+    padding: 4rem;
+    box-sizing: border-box;
+    min-height: auto;
+}
+
+.stickyBox {
+    height: 60vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 20%;
+    overflow: hidden;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Abstand zwischen den Service-Items */
+    line-height: 1.6;
+}
+
+.serviceItem h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Etwas größer für bessere Lesbarkeit */
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr; /* Mobile: Eine Spalte */
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .stickyBox {
+        width: 100%;
+        position: relative;
+        height: 40vh;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation für Sticky Box */
+.serviceLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.serviceLink:hover .stickyBox {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}

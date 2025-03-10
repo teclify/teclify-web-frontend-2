@@ -1,0 +1,61 @@
+.about-us {
+  padding: 2rem;
+
+}
+
+.about-us-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem; 
+}
+
+.highlight {
+  display: flex;
+  align-items: center; 
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+.highlight-image-container {
+  flex: 0 0 auto; 
+}
+
+.highlight-image {
+  border-radius: 50%; 
+  margin-bottom: 1rem;
+  object-fit: cover; 
+}
+
+.highlight-description-container {
+  flex: 1; 
+}
+
+.highlight-description {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-image-container {
+    margin-bottom: 1rem;
+  }
+}

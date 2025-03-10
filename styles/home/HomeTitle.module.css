@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.hero_section {
+  height: 110dvh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  animation: fadeInBackground 1s ease-in-out forwards;
+}
+
+@keyframes slideInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem; 
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: slideInTitle 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes slideInSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; 
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideInSubtitle 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cta-button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #357A98;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeInButton 1s ease-in-out 3.5s forwards;
+}
+
+.cta-button:hover {
+  background-color: #2a5f79;
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem; 
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem; 
+  }
+
+  .cta-button {
+    padding: 10px 20px; 
+    font-size: 0.9rem;
+  }
+}

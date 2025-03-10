@@ -1,0 +1,200 @@
+.hexagonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagonContainer {
+  width: 80dvw;
+  display: flex;
+  flex-wrap: wrap;
+  transform: skew(0deg, 0deg);
+}
+
+.hexagonOuter {
+  transition: all 0.7s;
+  -webkit-clip-path: polygon(0 25%,
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%);
+  clip-path: polygon(0 25%,
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%);
+  width: 20vw;
+  height: 23.09vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+}
+
+
+.hexagonOuterHover:hover {
+  transform: scale(1.6);
+  z-index: 50;
+  background-color: #6698ac;
+}
+
+
+
+.hexagonInner {
+  background-color: #357A98;
+  color: #ffffff;
+  -webkit-clip-path: polygon(0 25%,
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%);
+  clip-path: polygon(0 25%,
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.blank {
+  background-color: #BFDAE5;
+}
+
+.hexagonContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+@media (min-width: 901px) {
+  
+  .hexagonContent p {
+    display: -webkit-box;   
+    -webkit-line-clamp: 5;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;         
+    text-overflow: ellipsis;
+  }
+
+.hexagonOuter {
+  margin-top: -5.75vw;
+  }
+
+  .hexagonOuter:nth-child(-n + 4) {
+    margin-top: 0;
+  }
+  
+  .hexagonOuter:nth-child(7n + 5) {
+    margin-left: 10vw;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .hexagonContent p {
+    display: -webkit-box;   
+    -webkit-line-clamp: 4;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;         
+    text-overflow: ellipsis;
+  }
+
+  .hexagonOuter {
+    margin-top: -7.7vw;
+    width: 26.66vw;
+    height: calc(26.66vw * 1.1547);
+  }
+
+
+  .hexagonOuter:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+  
+  .hexagonOuter:nth-child(5n + 4) {
+    margin-left: 13.33vw;
+  }  
+}
+
+
+@media (max-width: 700px) {
+
+
+  .hexagonContent p {
+    display: -webkit-box;   
+    -webkit-line-clamp: 4;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;         
+    text-overflow: ellipsis;
+  }
+
+  .hexagonContainer {
+    width: 90dvw;
+  }
+
+  .hexagonOuter {
+    margin-top: -8.7vw;
+    width: 30vw;
+    height: calc(30vw * 1.1547);
+  }
+
+
+  .hexagonOuter:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+  
+  .hexagonOuter:nth-child(5n + 4) {
+    margin-left: 15vw;
+  }  
+}
+
+@media (max-width: 500px) {
+
+
+  .hexagonContent p {
+    display: -webkit-box;   
+    -webkit-line-clamp: 3;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;         
+    text-overflow: ellipsis;
+  }
+
+  .hexagonContainer {
+    width: 80dvw;
+  }
+
+  .hexagonOuter {
+    margin-top: -11.7vw;
+    width: 40vw;
+    height: calc(40vw * 1.1547);
+  }
+  .hexagonOuter:nth-child(n + 2) {
+    margin-top: 0;
+    margin-left: 0;
+  }  
+
+  .hexagonOuter:nth-child(3n + 3) {
+    margin-top: -11.7vw;
+    margin-left: 20vw;
+    margin-bottom: -11.7vw;
+  }  
+
+  .hexagonOuter:last-child {
+    margin-bottom: 10vw;
+  }
+
+   
+}

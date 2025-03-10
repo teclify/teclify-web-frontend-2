@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 90dvw;
+    box-sizing: border-box;
+}
+
+.portfolioSectionItem {
+    display: grid;
+    grid-template-columns: 32% 65%;
+    gap: 3%;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+}
+
+.portfolioSectionItem.alternate {
+    grid-template-columns: 32% 65%;
+    direction: rtl;
+}
+
+.stickyBox {
+    margin-top: 5%;
+    height: 60vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 20%;
+    overflow: hidden;
+}
+
+.portfolioSectionImage {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', serif;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .portfolioSectionItem {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .portfolioSectionItem.alternate {
+        grid-template-columns: 1fr;
+        direction: ltr; 
+    }
+
+    .stickyBox {
+        position: static; 
+        height: auto; 
+        margin-top: 0;
+    }
+
+    .content h1 {
+        font-size: 2rem; 
+        margin-bottom: 1rem; 
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 1rem; 
+    }
+
+    .portfolioSectionItem {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .content h1 {
+        font-size: 1.75rem; 
+    }
+
+    .content p {
+        font-size: 0.875rem; 
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section {
+        padding: 0.5rem; 
+         max-width: 90dvh;
+    }
+    .content h1 {
+        font-size: 1.3rem; 
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}

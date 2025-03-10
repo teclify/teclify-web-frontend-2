@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #E5F6FB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 200px;
+}
+
+.links {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+.links li {
+    display: inline-block;
+    padding: 0.5rem;
+
+}
+
+
+
+.links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #E5F6FB;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.links.scrolled li a {
+    color: #333;
+}
+
+.links li a:hover {
+    color: #357A98;
+}
+
+
+.contact_button {
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #E5F6FB;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: #E5F6FB solid;
+    transition: all 0.3s ease 0s;
+}
+
+
+
+.contact_button.scrolled {
+    color: #333;
+    border: #333 solid;
+}
+
+.contact_button:hover {
+    color: #E5F6FB;
+    background-color: #357A98;
+}
+
+
+@media (max-width: 800px) {
+    .navbar {
+        display: flex;
+        padding: 1rem;
+        justify-content: flex-end;
+        background-color: #E5F6FB;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact_button {
+        display: none;
+    }
+
+    .links li {
+        padding: 1rem 0;
+        display: block;
+    }
+
+    .links.active {
+        display: flex;
+        background-color: #E5F6FB;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .contact_button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+
+    .trigger {
+        z-index: 100;
+        border: 2px solid #fff;
+        border-radius: 20px;
+    }
+
+    .bars {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .bars .line {
+        fill: none;
+        stroke: #333;
+        stroke-width: 4;
+        stroke-linecap: square;
+    }
+
+    .bars .line.top {
+        stroke-dasharray: 40 172;
+    }
+
+    .bars .line.middle {
+        stroke-dasharray: 40 111;
+    }
+
+    .bars .line.bottom {
+        stroke-dasharray: 40 172;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: flex-start;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100dvh;
+        background-color: #E5F6FB;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 9999;
+    }
+
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        display: none;
+    }
+
+    .sidebar_toggle:checked~.sidebar {
+        right: 0;
+    }
+
+    .sidebar_toggle:checked~.overlay {
+        display: block;
+    }
+
+    .sidebar_toggle {
+        display: none;
+    }
+
+
+    .checkboxExit {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+
+    .barsExit {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .barsExit .line {
+        fill: none;
+        stroke: #333;
+        stroke-width: 4;
+        stroke-linecap: square;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    }
+
+    .barsExit .line.top {
+        stroke-dasharray: 40 172;
+    }
+
+    .barsExit .line.middle {
+        stroke-dasharray: 40 111;
+    }
+
+    .barsExit .line.bottom {
+        stroke-dasharray: 40 172;
+    }
+
+    .barsExit .top {
+        stroke-dashoffset: -132px;
+    }
+
+    .barsExit .middle {
+        stroke-dashoffset: -71px;
+    }
+
+    .barsExit .bottom {
+        stroke-dashoffset: -132px;
+    }
+
+
+
+    .sidebar_links li a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+    }
+
+    .sidebar_links li a:hover {
+        color: #357A98;
+    }
+
+    .sidebar_links {
+        list-style: none;
+        padding: 20px;
+    }
+
+    .sidebar_links li {
+
+        display: block;
+        margin: 20px;
+        padding: 0.5rem 1rem;
+        text-align: center;
+
+    }
+
+    .sidebar a {
+        text-decoration: none;
+    }
+
+    .sidebar_contact_button {
+        display: block;
+        margin: auto;
+        background-color: transparent;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: #333;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: #333 solid;
+        transition: all 0.3s ease 0s;
+    }
+
+    .sidebar_contact_button.scrolled {
+        color: #333;
+        border: #333 solid;
+    }
+
+    .sidebar_contact_button:hover {
+        color: #E5F6FB;
+        background-color: #357A98;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        left: 30%;
+    }
+
+}

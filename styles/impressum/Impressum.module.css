@@ -1,0 +1,94 @@
+.impressum {
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .impressum .header {
+    font-size: 2rem;
+    color: #285f79;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  .info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .impressum .title {
+    font-size: 1.8rem;
+    color: #357a98;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .impressum .subheader {
+    font-size: 1.4rem;
+    color: #285f79;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .impressum p {
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .impressum .subtext {
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  .impressum .info p {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+
+  .impressumContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px;
+}
+
+.impressumContainer > div:first-child {
+    flex: 3;
+    max-width: 30%;
+}
+
+.impressumContainer > div:last-child {
+    flex: 7;
+    max-width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .impressumContainer {
+       display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .header {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  
+
+    .impressumContainer > div:first-child {
+        max-width: 90%;
+    }
+
+    .impressumContainer > div:last-child {
+        max-width: 90%;
+    }
+  
+}

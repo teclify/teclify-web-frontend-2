@@ -1,0 +1,45 @@
+.facts-and-figures {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .facts-title {
+    font-size: 1.8rem;
+    color: #2a5f79;
+    margin-bottom: 2rem;
+  }
+  
+  .facts-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .fact {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+ 
+  
+  .icon {
+    color: #2a5f79;
+    margin-bottom: 1rem;
+  }
+  
+  .fact-title {
+    font-size: 1.2rem;
+    color: #2a5f79;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fact-description {
+    font-size: 1.4rem;
+    font-weight: bolder;
+  }
+  

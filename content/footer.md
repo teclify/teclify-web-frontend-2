@@ -1,0 +1,37 @@
+---
+logo: "/img/teclify-logo.png"
+links:
+  impressum: "/impressum"
+  datenschutz: "/datenschutz"
+overview:
+  - name: "About Us"
+    link: "/aboutus"
+  - name: "Leistungen"
+    link: "/services"
+  - name: "Portfolio"
+    link: "/portfolio"
+  - name: "Expertise"
+    link: "/expertise"
+  - name: "Karriere"
+    link: "/career"
+contact:
+  - type: "form"
+    label: "Kontaktformular"
+    link: "/contact"
+  - type: "email"
+    label: "Email: info@teclify.com"
+    link: "mailto:info@teclify.com"
+  - type: "phone"
+    label: "+49 176 14375319"
+    link: "tel:+4917614375319"
+  - type: "phone"
+    label: "+49 176 14375318"
+    link: "tel:+4917614375318"
+socialMedia:
+  - platform: "Xing"
+    link: "https://www.xing.com"
+  - platform: "LinkedIn"
+    link: "https://www.linkedin.com"
+  - platform: "Instagram"
+    link: "https://www.instagram.com"
+---
