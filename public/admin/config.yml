@@ -114,7 +114,7 @@ collections:
         file: "content/components/tools.md"
         fields:
           # Tools Section (Laden von externen Markdown-Datei)
-          -name: "title"
+          - name: "title"
             label: "Title"
             widget: "string"
           - name: "category"
