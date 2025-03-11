@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
@@ -13,12 +14,40 @@ export default function AboutUsPage({ navbar, footer, title, description, image,
   return (
     <>
       <Navbar navbar={navbar} />
-      <Title title={title} description={description} image={image} />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+      >
+        <Title title={title} description={description} image={image} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+      >
       <AboutUsDetails highlightDescription={highlightDescription} highlights={highlights} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+      >
       <FactsAndFigures facts={facts} /> 
-      <ValuesSection values={values} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+      >
       <ManagementSection title="Geschäftsführung" management={management} />
-      <div className="divider"></div>
+      </motion.div>
+
+      <ValuesSection values={values} />
       <Footer footer={footer} />
     </>
   );
