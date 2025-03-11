@@ -26,11 +26,10 @@
 .stickyBox {
     margin-top: 5%;
     height: 60vh;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4 ));
     position: sticky;
     top: 20%;
     overflow: hidden;

@@ -1,6 +1,6 @@
 .section {
     display: grid;
-    grid-template-columns: 35% 60%; /* Sticky Box links (35%) | Content rechts (60%) */
+    grid-template-columns: 35% 60%; 
     gap: 5%;
     padding: 4rem;
     box-sizing: border-box;
@@ -9,12 +9,11 @@
 
 .stickyBox {
     height: 60vh;
-    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4 ));
     position: sticky;
     top: 20%;
     overflow: hidden;
@@ -29,19 +28,18 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 4rem; /* Abstand zwischen den Service-Items */
+    gap: 4rem;
     line-height: 1.6;
 }
 
 .serviceItem h2 {
     margin-bottom: 1rem;
-    font-size: 1.8rem; /* Etwas größer für bessere Lesbarkeit */
+    font-size: 1.8rem; 
 }
 
-/* Responsive Anpassung */
 @media (max-width: 768px) {
     .section {
-        grid-template-columns: 1fr; /* Mobile: Eine Spalte */
+        grid-template-columns: 1fr; 
         gap: 2rem;
         padding: 2rem;
     }
