@@ -154,9 +154,6 @@ collections:
                         label: "Klasse"
                         widget: "string"
 
-          
- 
-
   - name: "navbar"
     label: "Navbar"
     slug: "{{slug}}"
@@ -193,8 +190,6 @@ collections:
             - name: "href"
               label: "Link"
               widget: "string"
-
-
 
   - name: "footer"
     label: "Footer"
@@ -251,7 +246,6 @@ collections:
                 label: "Link"
                 widget: "string"
 
-
   - name: "services"
     label: "Services"
     folder: "content/services"
@@ -284,7 +278,6 @@ collections:
             name: "image"
             widget: "image"
  
-
   - name: "Fehler"
     label: "Fehlerseite"
     files:
@@ -296,16 +289,15 @@ collections:
             label: "Fehleranzeige"
             widget: "object"
             fields:
-          - name: "header"
-            label: "Header"
-            widget: "string"
-          - name: "text"
-            label: "Text"
-            widget: "text"
-          - name: "buttontext"
-            label: "Button Text"
-            widget: "string"
-
+            - name: "header"
+              label: "Header"
+              widget: "string"
+            - name: "text"
+              label: "Text"
+              widget: "text"
+            - name: "buttontext"
+              label: "Button Text"
+              widget: "string"
 
   - name: "portfolio"
     label: "Portfolio"
@@ -467,8 +459,6 @@ collections:
                 label: "LinkedIn Profile"
                 widget: "string"
 
-
-
   - name: "contact"
     label: "Kontakt"
     folder: "content/contact"
@@ -541,7 +531,6 @@ collections:
               - name: "href"
                 label: "URL"
                 widget: "string"
-
 
   - name: "impressum"
     label: "Impressum"
@@ -625,7 +614,6 @@ collections:
             label: "VAT ID"
             widget: "string"
 
-
   - name: "dataprivacy"
     label: "Datenschutz"
     folder: "content/dataprivacy"
@@ -652,7 +640,6 @@ collections:
             label: "Text"
             widget: "text"
   
-
   - name: "service"
     label: "Service"
     files:
