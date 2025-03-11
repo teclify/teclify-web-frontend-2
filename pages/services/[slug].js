@@ -17,6 +17,7 @@ export default function ServiceDetailPage({
   description,
   image,
   service,
+  toolsTitle,
   category,
   tools,
   help
@@ -48,7 +49,7 @@ export default function ServiceDetailPage({
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
       >
 
-        <Tools category={category} tools={tools} /> 
+        <Tools toolsTitle={toolsTitle} category={category} tools={tools} /> 
         </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -103,6 +104,10 @@ export async function getStaticProps({ params }) {
     const serviceFileContent = fs.readFileSync(serviceFilePath, 'utf8');
     const { data: serviceData } = matter(serviceFileContent);
 
+    const toolsFilePath = path.join(process.cwd(), 'content', 'components', 'tools.md');
+    const toolsFileContent = fs.readFileSync(toolsFilePath, 'utf8');
+    const { data: toolsData } = matter(toolsFileContent);  
+
     // Navbar-Daten
     const navbarFilePath = path.join(contentPath, 'navbar.md');
     const navbarFileContent = fs.readFileSync(navbarFilePath, 'utf8');
@@ -131,8 +136,9 @@ export async function getStaticProps({ params }) {
         description: serviceData.description || '',
         image: serviceData.image || '',
         service,
-        category: serviceData.category,
-        tools: serviceData.tools,
+        toolsTitle:toolsData.title,
+        category: toolsData.category,
+        tools: toolsData.tools,
         help: serviceData.help,
       },
     };

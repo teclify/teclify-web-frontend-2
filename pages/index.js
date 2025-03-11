@@ -11,7 +11,7 @@ import Tools from '../components/services/Tools';
 import Services from '../components/home/Services';
 import Portfolio from '../components/home/Portfolio';
 
-export default function Home({ navbar, footer, title, subtitle, ctaText, ctaLink, backgroundImage, challengesTitle, challenges, solutionsTitle, solutions, servicesTitle, services, portfolioTitle, portfolioItems, category, tools }) {
+export default function Home({ navbar, footer, title, subtitle, ctaText, ctaLink, backgroundImage, challengesTitle, challenges, solutionsTitle, solutions, servicesTitle, services, portfolioTitle, portfolioItems, toolsTitle, category, tools }) {
   return (
     <>
       <Navbar navbar={navbar} />
@@ -51,7 +51,7 @@ export default function Home({ navbar, footer, title, subtitle, ctaText, ctaLink
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut",  delay: 0.2 }}
       >
-        <Tools category={category} tools={tools} />
+        <Tools toolsTitle={toolsTitle} category={category} tools={tools} />
       </motion.div>
 
       <motion.div
@@ -72,6 +72,11 @@ export async function getStaticProps() {
   const homeFilePath = path.join(process.cwd(), 'content', 'home', 'index.md');
   const homeFileContent = fs.readFileSync(homeFilePath, 'utf8');
   const { data: homeData } = matter(homeFileContent);
+
+  const toolsFilePath = path.join(process.cwd(), 'content', 'components', 'tools.md');
+  const toolsFileContent = fs.readFileSync(toolsFilePath, 'utf8');
+  const { data: toolsData } = matter(toolsFileContent);
+
 
   const navbarFilePath = path.join(process.cwd(), 'content', 'navbar.md');
   const navbarFileContent = fs.readFileSync(navbarFilePath, 'utf8');
@@ -98,8 +103,9 @@ export async function getStaticProps() {
       services: homeData.services || [],
       portfolioTitle: homeData.portfolioTitle || "Portfolio",
       portfolioItems: homeData.portfolioItems || [],
-      category: homeData.category,
-      tools: homeData.tools,
+      toolsTitle: toolsData.title,
+      category: toolsData.category,
+      tools: toolsData.tools,
     },
   };
 }

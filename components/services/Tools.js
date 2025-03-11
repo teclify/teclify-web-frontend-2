@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../../styles/services/Tools.module.css';
 
-const Tools = ({ category, tools }) => {
+const Tools = ({toolsTitle, category, tools }) => {
     const [activeCategory, setActiveCategory] = useState("all");
 
 
@@ -11,7 +11,7 @@ const Tools = ({ category, tools }) => {
 
     return (
         <section className={styles.section}>
-            <h2 className={styles.title}>Technologien</h2>
+            <h2 className={styles.title}>{toolsTitle}</h2>
 
             
             <div className={styles.categoryButtons}>

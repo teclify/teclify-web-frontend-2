@@ -11,7 +11,7 @@ import ServicesListing from '../components/portfolio/ServicesListing';
 import Tools from '../components/services/Tools';
 import References from '../components/portfolio/References';
 
-export default function PortfolioPage({ navbar, footer, title, description, image, portfolioSection, services, category, tools, references }) {
+export default function PortfolioPage({ navbar, footer, title, description, image, portfolioSection, services,toolsTitle, category, tools, references }) {
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function PortfolioPage({ navbar, footer, title, description, imag
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
       >
-        <Tools category={category} tools={tools} />
+        <Tools toolsTitle={toolsTitle} category={category} tools={tools} />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -70,6 +70,11 @@ export async function getStaticProps() {
   const servicesFileContent = fs.readFileSync(servicesFilePath, 'utf8');
   const { data: serviceData } = matter(servicesFileContent);
 
+  const toolsFilePath = path.join(process.cwd(), 'content', 'components', 'tools.md');
+  const toolsFileContent = fs.readFileSync(toolsFilePath, 'utf8');
+  const { data: toolsData } = matter(toolsFileContent);
+
+
   const navbarFilePath = path.join(process.cwd(), 'content', 'navbar.md');
   const navbarFileContent = fs.readFileSync(navbarFilePath, 'utf8');
   const { data: navbarData } = matter(navbarFileContent);
@@ -87,8 +92,9 @@ export async function getStaticProps() {
       image: portfolioData.image,
       portfolioSection: portfolioData.portfolioSection,
       services: serviceData.services,
-      category: portfolioData.category,
-      tools: portfolioData.tools,
+      toolsTitle: toolsData.title,
+      category: toolsData.category,
+      tools: toolsData.tools,
       references: portfolioData.references,
     },
   };
